@@ -1,0 +1,17 @@
+export const AffiliatesSortOptions = [
+  { text: "Fecha creación", value: "createdAt" },
+  { text: "Fecha actualización", value: "updatedAt" },
+  { text: "Nombre", value: "name" },
+  { text: "Apellido Paterno", value: "fatherSurname" },
+  { text: "Apellido Materno", value: "motherSurname" },
+  { text: "Email", value: "email" },
+  { text: "Teléfono", value: "cellPhoneNumber" },
+  { text: "C.P.", value: "cp" },
+  { text: 'Colonia', value: 'neighborhood' },
+  { text: "Ciudad", value: "city" },
+  { text: "Municipio", value: "township" },
+  { text: "Sección", value: "electoralSection" },
+  { text: "Distrito", value: "federalDistrict" },
+  { text: "Tipo de registro", value: "typeRegister" },
+  { text: "Fecha de registro", value: "dateRegister" },
+]
