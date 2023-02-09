@@ -23,7 +23,7 @@ export function setRememberSesion(rememberSesion) {
 
 export function isLoggedIn() {
   let authToken = getAuthToken()
-  return !emptyString(authToken)  && isTokenExpired(authToken)
+  return !emptyString(authToken)  && !isTokenExpired(authToken)
 }
 
 export function emptyString(value) {

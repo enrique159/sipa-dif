@@ -50,7 +50,7 @@ const router = new VueRouter({
 })
 
 
-const usertype = store.getters.getUser.usertype;
+const usertype = store.getters.getUser.userType;
 router.beforeEach(async (to, from, next) => {
   if (to.name == "login" && isLoggedIn()) {
     console.log('logged in')

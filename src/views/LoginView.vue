@@ -108,11 +108,12 @@ export default {
       await delay(1000);
       const response = await AuthServices.loginUser({ username: this.username, password: this.password})
       if(response) {
-        if(response.status === 200) {
-          this.setUserLogin(response);
+        console.log(response.status)
+        if(response.status === 202) {
+          this.setUserLogin(response.data);
           this.$router.push('/dashboard');
         } else {
-          errorAuthUser(response.data);
+          errorAuthUser(response.errors);
         }
       } else {
         showSnackbar('No hay conexión con el servidor', 'red');
@@ -121,9 +122,9 @@ export default {
     },
 
     // Método para setear los valores
-    setUserLogin(user) {
-      setAuthToken(user.data.token);
-      setUser(user.data.user);
+    setUserLogin(response) {
+      setAuthToken(response.data.token);
+      setUser(response.data.user);
       setRememberSesion(this.rememberSession);
     },
   }
